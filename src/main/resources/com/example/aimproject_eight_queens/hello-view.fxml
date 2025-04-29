@@ -25,12 +25,12 @@
             <Text fx:id="randomRestartCount" fill="GAINSBORO" layoutX="37.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Restart Count : 0" />
             <Text fx:id="queenMovesCount" fill="GAINSBORO" layoutX="36.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queen Moves Count : 0" />
             <Text fx:id="CapturingPairCount" fill="GAINSBORO" layoutX="37.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capturing Pairs : 0" />
-            <Button layoutX="28.0" layoutY="289.0" mnemonicParsing="false" onAction="#fcHillClimbing" text="First Choice HC Solution" />
+            <Button fx:id="fcHillClimbingButton" layoutX="28.0" layoutY="289.0" mnemonicParsing="false" onAction="#fcHillClimbing" text="First Choice HC Solution" />
             <Button fx:id="tryManuallyButton" layoutX="55.0" layoutY="201.0" mnemonicParsing="false" onAction="#tryManually" text="Try Manually" />
-            <Button layoutX="21.0" layoutY="248.0" mnemonicParsing="false" onAction="#pureHillClimbing" text="Pure Hill Climbing Solution" />
-            <Button layoutX="29.0" layoutY="155.0" mnemonicParsing="false" onAction="#addQueensRandomly" text="Add Queens Randomly" />
+            <Button fx:id="pureHillClimbingButton" layoutX="21.0" layoutY="248.0" mnemonicParsing="false" onAction="#pureHillClimbing" text="Pure Hill Climbing Solution" />
+            <Button fx:id="randomiseQueensButton" layoutX="29.0" layoutY="155.0" mnemonicParsing="false" onAction="#randomiseQueens" text="Randomly Mix Queens" />
             <Slider fx:id="timeSettings" layoutX="35.0" layoutY="688.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-background-color: #FFFFFF;" value="5.0" />
-            <Text fill="GAINSBORO" layoutX="35.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speed : " />
+            <Text fill="GAINSBORO" layoutX="35.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queen Move Speed:" />
          </children>
       </Pane>
    </children>

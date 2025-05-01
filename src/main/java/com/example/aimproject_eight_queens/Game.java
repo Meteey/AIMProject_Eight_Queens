@@ -1,14 +1,12 @@
 package com.example.aimproject_eight_queens;
-
-import java.util.Arrays;
 import java.util.Random;
 
 public class Game {
     public int[] Queens;
     public int capturingPairs;
     private GameObserver observer;
-    private int moveCount =0;
-    private int repeatCount =0;
+    public int moveCount =0;
+    public int repeatCount =0;
 
     public void addObserver(GameObserver observer) {
         this.observer = observer;
@@ -45,7 +43,7 @@ public class Game {
         return row1 == row2 || (Math.abs(column1 - column2) == Math.abs(row1 - row2));
     }
 
-    public void fchc(){
+    public void FirstChoiceHillClimbing(){
         int initialValue = capturingPairs;
         for(int column = 0; column < 8; column++){
             int originalPosition = Queens[column];
@@ -69,7 +67,7 @@ public class Game {
         randomRestart();
     }
 
-    public void purehc(){
+    public void HillClimbing(){
         int bestValue = analyzeNode();
         int[] bestMove = new int[]{-1, -1};
         for(int column = 0; column < 8; column++){

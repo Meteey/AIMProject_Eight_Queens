@@ -125,7 +125,7 @@ public class HelloController implements Initializable, GameObserver {
         timeline = new Timeline(new KeyFrame(Duration.seconds(1/timeSettings.getValue()), event -> {
 
             if(game.capturingPairs > 0){
-                game.purehc();
+                game.HillClimbing();
             }
             else{
                 timeline.stop();
@@ -146,7 +146,7 @@ public class HelloController implements Initializable, GameObserver {
         timeline = new Timeline(new KeyFrame(Duration.seconds(1/timeSettings.getValue()), event -> {
 
             if(game.capturingPairs > 0){
-                game.fchc();
+                game.FirstChoiceHillClimbing();
             }
             else{
                 timeline.stop();
